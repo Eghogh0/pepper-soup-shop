@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;500;600;700&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050505;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scroll styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Custom scrollbar hidden on Lenis (desktop) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utility classes for brand gradients */
+.bg-pepper-gradient {
+  background: linear-gradient(135deg, #FF5A1F 0%, #E94B12 100%);
+}
+
+.text-pepper-gradient {
+  background: linear-gradient(135deg, #FF5A1F, #E94B12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-leaf-gradient {
+  background: linear-gradient(135deg, #5DBB63 0%, #429B47 100%);
+}
+
+/* Steam particle base */
+.steam-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+/* HeatMeter slider track */
+input.heat-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #5DBB63 0%, #FFA500 25%, #FF5A1F 50%, #E94B12 75%, #FF0000 100%);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+input.heat-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #FF5A1F;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 12px #FF5A1F;
+}
+
+input.heat-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #FF5A1F;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 12px #FF5A1F;
+}
